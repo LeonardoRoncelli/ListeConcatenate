@@ -40,6 +40,14 @@ public class Main {
                     funzione.inserimentoInPosizione(info, posizione);
                     break;
                 }
+                case 5 : {
+                    System.out.print("Inserisci l'informazione da inserire: ");
+                    String info = input.nextLine();
+                    System.out.print("Inserisci l'informazione target: ");
+                    String target = input.nextLine();
+                    funzione.inserimentoPrimaDi(info, target);
+                    break;
+                }
             }
         } while (scelta != 0);
     }

@@ -43,4 +43,21 @@ public class ListaConcatenata<T> {
             grandezza++;
         }
     }
+    public void inserimentoPrimaDi(T info, T target) {
+        if (head == null) return;
+        if (head.getInformazione().equals(target)) {
+            inserimentoInTesta(info);
+            return;
+        }
+        Nodo<T> corrente = head;
+        while (corrente.getPuntatore() != null &&
+                !corrente.getPuntatore().getInformazione().equals(target)) {
+            corrente = corrente.getPuntatore();
+        }
+        if (corrente.getPuntatore() != null) {
+            Nodo<T> nuovo = new Nodo<>(info, corrente.getPuntatore());
+            corrente.setPuntatore(nuovo);
+            grandezza++;
+        }
+    }
 }
