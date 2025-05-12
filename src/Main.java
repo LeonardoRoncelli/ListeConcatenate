@@ -26,6 +26,12 @@ public class Main {
                     funzione.inserimentoInTesta(info);
                     break;
                 }
+                case 3 : {
+                    System.out.print("Inserisci l'informazione da inserire: ");
+                    String info = input.nextLine();
+                    funzione.inserimentoInCoda(info);
+                    break;
+                }
             }
         } while (scelta != 0);
     }

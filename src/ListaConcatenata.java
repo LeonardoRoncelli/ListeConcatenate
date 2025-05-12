@@ -5,7 +5,7 @@ public class ListaConcatenata<T> {
         StringBuilder sb = new StringBuilder("Lista: ");
         Nodo<T> corrente = head;
         while (corrente != null) {
-            sb.append(corrente.getInformazione()).append(" -> ");
+            sb.append(corrente.getInformazione()).append(" - ");
             corrente = corrente.getPuntatore();
         }
         sb.append("null");
@@ -13,6 +13,19 @@ public class ListaConcatenata<T> {
     }
     public void inserimentoInTesta(T info) {
         head = new Nodo<>(info, head);
+        grandezza++;
+    }
+    public void inserimentoInCoda(T info) {
+        Nodo<T> nuovo = new Nodo<>(info, null);
+        if (head == null) {
+            head = nuovo;
+        } else {
+            Nodo<T> corrente = head;
+            while (corrente.getPuntatore() != null) {
+                corrente = corrente.getPuntatore();
+            }
+            corrente.setPuntatore(nuovo);
+        }
         grandezza++;
     }
 }
