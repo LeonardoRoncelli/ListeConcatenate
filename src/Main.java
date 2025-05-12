@@ -13,6 +13,13 @@ public class Main {
                     "0 - Uscita");
             System.out.print("Inserisci la tua scelta: ");
             scelta= input.nextInt();
+            switch (scelta){
+                case 1:{
+
+                    break;
+                }
+                default -> System.out.println("Scelta non disponibile!");
+            }
         }while (scelta!=0);
     }
 }
