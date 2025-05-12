@@ -3,7 +3,7 @@ public class Nodo<T> {
     private Nodo<T> puntatore;
     public Nodo(T informazione, Nodo<T> puntatore) {
         this.informazione = informazione;
-        this.puntatore=puntatore;
+        this.puntatore = puntatore;
     }
     public T getInformazione() {
         return informazione;
