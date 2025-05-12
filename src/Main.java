@@ -20,7 +20,12 @@ public class Main {
                     System.out.println(funzione);
                     break;
                 }
-                default : System.out.println("Scelta non valida!");
+                case 2 : {
+                    System.out.print("Inserisci l'informazione da inserire: ");
+                    String info = input.nextLine();
+                    funzione.inserimentoInTesta(info);
+                    break;
+                }
             }
         } while (scelta != 0);
     }

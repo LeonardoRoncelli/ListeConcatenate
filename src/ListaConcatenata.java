@@ -11,4 +11,8 @@ public class ListaConcatenata<T> {
         sb.append("null");
         return sb.toString();
     }
+    public void inserimentoInTesta(T info) {
+        head = new Nodo<>(info, head);
+        grandezza++;
+    }
 }
