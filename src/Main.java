@@ -48,6 +48,13 @@ public class Main {
                     funzione.inserimentoPrimaDi(info, target);
                     break;
                 }
+                case 6 : {
+                    System.out.print("Inserisci l'informazione da cancellare: ");
+                    String daCancellare = input.nextLine();
+                    funzione.cancellaNodo(daCancellare);
+                    break;
+                }
+                default : System.out.println("Scelta non valida!");
             }
         } while (scelta != 0);
     }

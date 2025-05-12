@@ -60,4 +60,21 @@ public class ListaConcatenata<T> {
             grandezza++;
         }
     }
+    public void cancellaNodo(T info) {
+        if (head == null) return;
+        if (head.getInformazione().equals(info)) {
+            head = head.getPuntatore();
+            grandezza--;
+            return;
+        }
+        Nodo<T> corrente = head;
+        while (corrente.getPuntatore() != null &&
+                !corrente.getPuntatore().getInformazione().equals(info)) {
+            corrente = corrente.getPuntatore();
+        }
+        if (corrente.getPuntatore() != null) {
+            corrente.setPuntatore(corrente.getPuntatore().getPuntatore());
+            grandezza--;
+        }
+    }
 }
