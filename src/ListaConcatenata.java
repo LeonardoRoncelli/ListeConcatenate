@@ -28,4 +28,19 @@ public class ListaConcatenata<T> {
         }
         grandezza++;
     }
+    public void inserimentoInPosizione(T info, int posizione) {
+        if (posizione <= 0) {
+            inserimentoInTesta(info);
+        } else if (posizione >= grandezza) {
+            inserimentoInCoda(info);
+        } else {
+            Nodo<T> corrente = head;
+            for (int i = 0; i < posizione - 1; i++) {
+                corrente = corrente.getPuntatore();
+            }
+            Nodo<T> nuovo = new Nodo<>(info, corrente.getPuntatore());
+            corrente.setPuntatore(nuovo);
+            grandezza++;
+        }
+    }
 }

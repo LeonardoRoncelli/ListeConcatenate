@@ -32,6 +32,14 @@ public class Main {
                     funzione.inserimentoInCoda(info);
                     break;
                 }
+                case 4 : {
+                    System.out.print("Inserisci l'informazione da inserire: ");
+                    String info = input.nextLine();
+                    System.out.print("Inserisci la posizione: ");
+                    int posizione = input.nextInt();
+                    funzione.inserimentoInPosizione(info, posizione);
+                    break;
+                }
             }
         } while (scelta != 0);
     }
