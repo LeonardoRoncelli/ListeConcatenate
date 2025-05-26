@@ -16,6 +16,9 @@ public class Main {
             scelta = input.nextInt();
             input.nextLine();
             switch (scelta) {
+                case 0:{
+                    break;
+                }
                 case 1:{
                     System.out.println(funzione);
                     break;
