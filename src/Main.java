@@ -17,6 +17,7 @@ public class Main {
             input.nextLine();
             switch (scelta) {
                 case 0:{
+                    System.out.println("Uscita...");
                     break;
                 }
                 case 1:{
